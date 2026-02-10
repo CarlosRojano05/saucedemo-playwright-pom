@@ -1,28 +1,74 @@
-#  Especificación de Casos de Prueba
+# 📋 Especificación de Casos de Prueba
 
-**Proyecto:** SauceDemo Shopping Flow
-**Herramienta:** Playwright
-**Ambiente:** [https://www.saucedemo.com/](https://www.saucedemo.com/)
+## 📌 Proyecto
+**Nombre:** SauceDemo – Shopping Flow  
+**URL:** https://www.saucedemo.com/  
+**Herramienta de Automatización:** Playwright  
+**Lenguaje:** JavaScript  
+**Patrón de Diseño:** Page Object Model (POM)
 
-## TC-01: Compra Exitosa de un Producto (E2E)
+---
 
-**Precondiciones:**
-- El usuario debe tener credenciales válidas.
-- La aplicación debe estar disponible.
+## 🧪 Caso de Prueba: TC-01 – Compra Exitosa de un Producto (E2E)
 
-| ID | Paso | Acción | Resultado Esperado |
-| :--- | :--- | :--- | :--- |
-| 1 | Navegar a la URL de inicio | Se muestra la página de Login correctamente. |
-| 2 | Ingresar `standard_user` y password | El usuario ingresa al dashboard de productos. |
-| 3 | Clic en "Add to cart" de un producto | El contador del carrito aumenta a '1'. |
-| 4 | Clic en el ícono del carrito | Se visualiza el producto seleccionado en la lista. |
-| 5 | Clic en "Checkout" | Se muestra el formulario "Checkout: Your Information". |
-| 6 | Completar Nombre, Apellido y CP | Los datos se ingresan correctamente. |
-| 7 | Clic en "Continue" y luego en "Finish" | Se muestra el encabezado "Thank you for your order!". |
+**Tipo de Prueba:** End-to-End (E2E)  
+**Nivel de Prueba:** Sistema  
+**Prioridad:** Alta  
+**Severidad:** Crítica  
+**Automatizado:** Sí  
 
-**Datos de Prueba (Variables de Entorno):**
-- `USER_NAME`: standard_user
-- `PASSWORD`: secret_sauce
+---
 
-**Evidencias Automatizadas:**
-- El framework genera automáticamente un video de la ejecución y capturas de pantalla en caso de fallo.
+### ✅ Precondiciones
+- El usuario debe contar con credenciales válidas.
+- La aplicación debe estar disponible y operativa.
+- El navegador debe abrirse correctamente.
+
+---
+
+### 🧾 Datos de Prueba (Variables de Entorno)
+
+| Variable | Valor |
+|--------|-------|
+| USER_NAME | standard_user |
+| PASSWORD | secret_sauce |
+| FIRST_NAME | Juan |
+| LAST_NAME | Pérez |
+| POSTAL_CODE | 12345 |
+
+---
+
+### 📑 Pasos de Prueba
+
+| ID | Paso | Acción | Datos de Prueba | Resultado Esperado | Resultado Real | Estado |
+|----|------|--------|----------------|-------------------|----------------|--------|
+| 1 | Acceder a la aplicación | Navegar a `https://www.saucedemo.com/` | URL | Se muestra la página de Login correctamente | Página cargada | Pass |
+| 2 | Autenticación | Ingresar usuario y contraseña válidos | USER_NAME / PASSWORD | El usuario accede al dashboard de productos | Acceso exitoso | Pass |
+| 3 | Agregar producto | Clic en “Add to cart” de un producto | Sauce Labs Backpack | El contador del carrito aumenta a 1 | Contador actualizado | Pass |
+| 4 | Visualizar carrito | Clic en el ícono del carrito | — | Se visualiza el producto agregado | Producto visible | Pass |
+| 5 | Iniciar checkout | Clic en el botón “Checkout” | — | Se muestra el formulario de información | Formulario visible | Pass |
+| 6 | Completar formulario | Ingresar nombre, apellido y código postal | FIRST_NAME / LAST_NAME / POSTAL_CODE | Los datos se ingresan sin errores | Datos aceptados | Pass |
+| 7 | Finalizar compra | Clic en “Continue” y luego “Finish” | — | Se muestra el mensaje “Thank you for your order!” | Compra exitosa | Pass |
+
+---
+
+### 📌 Criterio de Aceptación
+- El flujo de compra debe completarse sin errores.
+- El mensaje **“Thank you for your order!”** debe mostrarse correctamente.
+- No deben presentarse errores visuales ni funcionales durante el flujo.
+
+---
+
+### 🎥 Evidencias Automatizadas
+- Video de la ejecución del test.
+- Capturas de pantalla automáticas en caso de fallo.
+- Trazas (traces) generadas por Playwright para análisis de errores.
+
+---
+
+### 🛠️ Notas Técnicas
+- Se implementó Page Object Model (POM) para mejorar la mantenibilidad del código.
+- Las credenciales se manejan mediante variables de entorno para mayor seguridad.
+- El test valida el flujo completo del sistema desde login hasta la confirmación de compra.
+
+---
