@@ -60,9 +60,13 @@
 ---
 
 ### 🎥 Evidencias Automatizadas
-- Video de la ejecución del test.
-- Capturas de pantalla automáticas en caso de fallo.
-- Trazas (traces) generadas por Playwright para análisis de errores.
+- Video y verificación de la ejecución del test.
+  
+<img width="1914" height="990" alt="check" src="https://github.com/user-attachments/assets/d8d201ed-3a43-4df2-ad0f-cbe09383b831" />
+
+![b27db3fc903b7c2b2db5df4fc1fbef12a3556dd9](https://github.com/user-attachments/assets/7de6a301-e00b-4e90-8eb4-42f1a150b458)
+
+
 
 ---
 
