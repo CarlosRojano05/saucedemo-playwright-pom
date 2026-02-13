@@ -1,0 +1,7 @@
+{
+  "productosAProbar": [
+    { "nombre": "Sauce Labs Backpack", "id": "add-to-cart-sauce-labs-backpack" },
+    { "nombre": "Sauce Labs Bike Light", "id": "add-to-cart-sauce-labs-bike-light" },
+    { "nombre": "Sauce Labs Bolt T-Shirt", "id": "add-to-cart-sauce-labs-bolt-t-shirt" }
+  ]
+}
