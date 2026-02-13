@@ -26,3 +26,8 @@ Se ha automatizado el flujo completo de compra (End-to-End):
 
 ---
 *Desarrollado por Carlos Manuel Rojano Camargo como parte de mi portafolio de QA Automation.*
+
+
+EVIDENCIA DEL TEST - PASS
+<img width="1909" height="905" alt="image" src="https://github.com/user-attachments/assets/52a77c25-9db1-4b08-8118-c97b9dee3c2c" />
+
